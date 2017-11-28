@@ -1,0 +1,22 @@
+unsigned char number =0; //this is what the number is GOING to be 
+unsigned char ASCIIInput = 0; //this is what the user inputs
+
+while('0' < ASCIIInput < '9')
+{
+	ASCIIInput = SCI0RxChar();
+}
+
+number += ASCIIToHex(ASCIIInput)*100; //hundered place in the number
+
+while('0' < ASCIIInput < '9')
+{
+	ASCIIInput = SCI0RxChar();
+}
+number += ASCIIToHex(ASCIIInput)*10; //Tens place in the number
+
+while('0' < ASCIIInput < '9')
+{
+	ASCIIInput = SCI0RxChar();
+}
+
+number += ASCIIToHex(ASCIIInput)*1; //last place in the number

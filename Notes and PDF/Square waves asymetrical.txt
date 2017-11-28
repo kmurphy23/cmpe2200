@@ -1,0 +1,13 @@
+interrupt VectorNumber_Vtimch0 void TimerInterval(void)
+{
+	if((PPT & 0b00000001)==1) //CHECK IF THE PORT T OF TIMER HIGH IS ==1
+	{
+	    TC0 += ; //WHATEVER THE TOP LENGTH WANTS
+	}
+	else
+	{
+	    TC0 += ; //whatever the bottom length is if port t is not high
+	}
+
+    TFLG1 |= 0b00000001; //clear the flag
+}
